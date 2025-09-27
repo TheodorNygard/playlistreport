@@ -45,6 +45,8 @@
         border: 1px solid rgba(255, 255, 255, 0.05);
         backdrop-filter: blur(10px);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden; /* Prevent overflow */
+        position: relative;
       }
       
       .viz-container:hover {
@@ -55,10 +57,17 @@
           0 0 30px rgba(29, 185, 84, 0.1);
       }
       
+      /* Ensure Vega visualizations fit within containers */
+      #timeline-vis, #pie-vis, #progress-vis {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+      }
+      
       .stats {
         font-size: 16px;
         color: #b8bcc8;
-        margin: 20px 0;
+        margin: 20px 0 0 0;
         line-height: 1.8;
       }
       
@@ -81,6 +90,7 @@
       /* Vega embed dark theme override */
       .vega-embed {
         padding: 0 !important;
+        width: 100% !important;
       }
       
       .vega-embed .vega-actions {
@@ -117,7 +127,19 @@
         animation: pulse 1.5s ease-in-out infinite;
       }
       
+      /* Container wrapper for centering */
+      .dashboard-wrapper {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      
       /* Responsive design */
+      @media (max-width: 1200px) {
+        body {
+          padding: 30px;
+        }
+      }
+      
       @media (max-width: 768px) {
         body {
           padding: 20px;
@@ -128,26 +150,49 @@
         .viz-container {
           padding: 20px;
         }
+        .stats strong {
+          min-width: 140px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        body {
+          padding: 15px;
+        }
+        h1 {
+          font-size: 1.5rem;
+        }
+        .viz-container {
+          padding: 15px;
+        }
       }
     </style>
   </head>
   <body>
-    <h1>🎵 Spotify Playlist Analytics Dashboard</h1>
-    
-    <div class="viz-container loading" id="timeline-container">
-      <div id="timeline-vis"></div>
-    </div>
-    
-    <div class="viz-container loading" id="pie-container">
-      <div id="pie-vis"></div>
-    </div>
-    
-    <div class="viz-container loading" id="progress-container">
-      <div id="progress-vis"></div>
-      <div id="stats" class="stats"></div>
+    <div class="dashboard-wrapper">
+      <h1>🎵 Spotify Playlist Analytics Dashboard</h1>
+      
+      <div class="viz-container loading" id="timeline-container">
+        <div id="timeline-vis"></div>
+      </div>
+      
+      <div class="viz-container loading" id="pie-container">
+        <div id="pie-vis"></div>
+      </div>
+      
+      <div class="viz-container loading" id="progress-container">
+        <div id="progress-vis"></div>
+        <div id="stats" class="stats"></div>
+      </div>
     </div>
     
     <script>
+      // Function to calculate responsive width
+      function getResponsiveWidth() {
+        const containerWidth = window.innerWidth - 140; // Account for body padding and container padding
+        return Math.min(Math.max(containerWidth, 300), 1200); // Min 300, max 1200
+      }
+      
       // Dark theme configuration for Vega
       const darkTheme = {
         background: 'transparent',
@@ -172,6 +217,8 @@
       fetch('query-results.json')
         .then(response => response.json())
         .then(data => {
+          
+          const vizWidth = getResponsiveWidth();
           
           // Process data for timeline
           const timelineData = data.map(song => {
@@ -198,21 +245,38 @@
             totalDuration += duration;
           });
           
-          const pieData = Object.entries(userRuntimes).map(([user, duration]) => ({
+          // Sort users by runtime for pie chart (descending)
+          const sortedUserRuntimes = Object.entries(userRuntimes)
+            .sort((a, b) => b[1] - a[1]);
+          
+          const pieData = sortedUserRuntimes.map(([user, duration]) => ({
             user: user,
             duration: duration,
             percentage: (duration / totalDuration) * 100
           }));
           
-          // Modern color palette
+          // Modern color palette - assign colors based on sorted order
           const userColors = ['#1db954', '#00d9ff', '#ff6b6b', '#feca57'];
+          
+          // Create a user-to-color mapping based on sorted order
+          const userColorMap = {};
+          sortedUserRuntimes.forEach(([user], index) => {
+            userColorMap[user] = userColors[index % userColors.length];
+          });
+          
+          // Get sorted users list for domain
+          const sortedUsers = sortedUserRuntimes.map(([user]) => user);
           
           // Timeline Visualization
           const timelineSpec = {
             $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
             title: '🎶 Playlist Energy & Mood Flow',
-            width: 900,
-            height: 400,
+            width: vizWidth * 0.85, // Use responsive width
+            height: 350,
+            autosize: {
+              type: 'fit',
+              contains: 'padding'
+            },
             background: 'transparent',
             config: darkTheme,
             data: { values: timelineData },
@@ -268,10 +332,16 @@
                     type: 'nominal',
                     title: 'Added By',
                     scale: {
-                      domain: ['månen', 'neo', 'rånse', 'kratos'],
-                      range: userColors
+                      domain: sortedUsers,
+                      range: userColors.slice(0, sortedUsers.length)
                     },
-                    legend: { orient: 'right', titleColor: '#e4e6eb', labelColor: '#b8bcc8' }
+                    legend: { 
+                      orient: 'bottom', 
+                      titleColor: '#e4e6eb', 
+                      labelColor: '#b8bcc8', 
+                      columns: 4,
+                      symbolType: 'circle'
+                    }
                   },
                   tooltip: [
                     { field: 'name', type: 'nominal', title: 'Song' },
@@ -286,19 +356,23 @@
             ]
           };
           
-          // Pie Chart Visualization
+          // Pie Chart Visualization (already sorted by runtime)
           const pieSpec = {
             $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
-            title: '⏱️ Runtime Contribution',
-            width: 400,
-            height: 400,
+            title: '⏱️ Runtime Contribution (Sorted by Duration)',
+            width: Math.min(vizWidth * 0.4, 350), // Smaller width for pie chart
+            height: 350,
+            autosize: {
+              type: 'fit',
+              contains: 'padding'
+            },
             background: 'transparent',
             config: darkTheme,
             data: { values: pieData },
             mark: {
               type: 'arc',
-              innerRadius: 80,
-              outerRadius: 160,
+              innerRadius: 60,
+              outerRadius: 140,
               tooltip: true,
               stroke: 'rgba(255, 255, 255, 0.1)',
               strokeWidth: 2
@@ -312,12 +386,22 @@
               color: {
                 field: 'user',
                 type: 'nominal',
-                title: 'User',
+                title: 'User (by duration)',
                 scale: {
-                  domain: ['månen', 'neo', 'rånse', 'kratos'],
-                  range: userColors
+                  domain: sortedUsers,
+                  range: userColors.slice(0, sortedUsers.length)
                 },
-                legend: { orient: 'right', titleColor: '#e4e6eb', labelColor: '#b8bcc8' }
+                legend: { 
+                  orient: 'bottom', 
+                  titleColor: '#e4e6eb', 
+                  labelColor: '#b8bcc8',
+                  symbolType: 'circle'
+                }
+              },
+              order: {
+                field: 'duration',
+                type: 'quantitative',
+                sort: 'descending'
               },
               opacity: {
                 value: 0.9
@@ -344,8 +428,12 @@
           const progressSpec = {
             $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
             title: '📊 Duration vs 12 Hour Limit',
-            width: 900,
-            height: 100,
+            width: vizWidth * 0.85,
+            height: 80,
+            autosize: {
+              type: 'fit',
+              contains: 'padding'
+            },
             background: 'transparent',
             config: darkTheme,
             data: { values: progressData },
@@ -445,7 +533,8 @@
               compiled: false,
               editor: false
             },
-            theme: 'dark'
+            theme: 'dark',
+            renderer: 'canvas'
           };
           
           vegaEmbed('#timeline-vis', timelineSpec, embedOpts).then(() => {
@@ -474,8 +563,21 @@
             songCounts[user] = (songCounts[user] || 0) + 1;
           });
           
-          const userStats = Object.entries(songCounts)
-            .map(([user, count]) => `<span style="color: ${userColors[Object.keys(songCounts).indexOf(user)]}">${user}: ${count}</span>`)
+          // Sort users by song count (descending)
+          const sortedSongCounts = Object.entries(songCounts)
+            .sort((a, b) => b[1] - a[1]);
+          
+          // Create user stats with sorted order and ranking
+          const userStats = sortedSongCounts
+            .map(([user, count], index) => {
+              const position = index + 1;
+              let medal = '';
+              if (position === 1) medal = '🥇 ';
+              else if (position === 2) medal = '🥈 ';
+              else if (position === 3) medal = '🥉 ';
+              
+              return `${medal}<span style="color: ${userColorMap[user]}; font-weight: 600;">${user}: ${count}</span>`;
+            })
             .join(' • ');
           
           document.getElementById('stats').innerHTML = `
@@ -483,7 +585,10 @@
               <strong>⏰ Total Duration:</strong> ${hours}h ${minutes}m
             </div>
             <div class="stats-row">
-              <strong>🎵 Total Songs:</strong> ${data.length} songs (${userStats})
+              <strong>🎵 Total Songs:</strong> ${data.length} songs
+            </div>
+            <div class="stats-row">
+              <strong>🏆 Songs by User:</strong> ${userStats}
             </div>
             <div class="stats-row">
               <strong>📊 Average Length:</strong> ${(totalDuration / data.length).toFixed(1)} minutes
@@ -498,7 +603,7 @@
         })
         .catch(error => {
           console.error('Error loading data:', error);
-          document.querySelector('body').innerHTML += '<p style="color: #ff4757; text-align: center; margin-top: 20px;">⚠️ Error loading data. Check console for details.</p>';
+          document.querySelector('.dashboard-wrapper').innerHTML += '<p style="color: #ff4757; text-align: center; margin-top: 20px;">⚠️ Error loading data. Check console for details.</p>';
         });
     </script>
   </body>
