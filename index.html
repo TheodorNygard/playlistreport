@@ -545,7 +545,7 @@
             </div>
           `;
           
-          // Progress Bar Visualization - SIMPLIFIED VERSION
+          // Progress Bar Visualization - SIMPLIFIED VERSION WITHOUT TITLE
           const progressData = [
             {
               label: 'Playlist Duration',
@@ -558,9 +558,9 @@
           
           const progressSpec = {
             $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
-            title: '🎯 Progress to 12 Hour Goal',
+            // Removed title completely
             width: isMobile ? vizWidth * 0.9 : vizWidth * 0.85,
-            height: getResponsiveHeight(60),
+            height: getResponsiveHeight(50), // Reduced height since no title
             autosize: {
               type: 'fit',
               contains: 'padding',
@@ -632,7 +632,6 @@
                   ]
                 }
               }
-              // Removed the text layer that was showing the percentage on the bar
             ]
           };
           
