@@ -415,19 +415,19 @@
           };
           
           // Progress Bar Visualization
-          const maxDuration = 12 * 60; // 12 hours in minutes
+          const goalDuration = 12 * 60; // 12 hours in minutes
           const progressData = [
             {
               label: 'Playlist Duration',
               value: totalDuration,
-              max: maxDuration,
-              percentage: (totalDuration / maxDuration) * 100
+              max: goalDuration,
+              percentage: totalDuration / goalDuration
             }
           ];
           
           const progressSpec = {
             $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
-            title: '📊 Duration vs 12 Hour Limit',
+            title: '🎯 Duration vs 12 Hour Goal',
             width: vizWidth * 0.85,
             height: 80,
             autosize: {
@@ -446,9 +446,9 @@
                 },
                 encoding: {
                   x: {
-                    datum: maxDuration,
+                    datum: goalDuration,
                     type: 'quantitative',
-                    scale: { domain: [0, maxDuration] },
+                    scale: { domain: [0, goalDuration] },
                     axis: {
                       title: 'Minutes',
                       format: '.0f',
@@ -467,10 +467,10 @@
                   type: 'bar',
                   color: {
                     gradient: 'linear',
-                    stops: totalDuration > maxDuration ? 
+                    stops: totalDuration > goalDuration ? 
                       [
-                        { offset: 0, color: '#ff4757' },
-                        { offset: 1, color: '#ff6b7a' }
+                        { offset: 0, color: '#feca57' },
+                        { offset: 1, color: '#ff9ff3' }
                       ] : 
                       [
                         { offset: 0, color: '#1db954' },
@@ -484,7 +484,7 @@
                   x: {
                     field: 'value',
                     type: 'quantitative',
-                    scale: { domain: [0, maxDuration] }
+                    scale: { domain: [0, goalDuration] }
                   },
                   y: {
                     field: 'label',
@@ -492,7 +492,7 @@
                   },
                   tooltip: [
                     { field: 'value', type: 'quantitative', format: '.1f', title: 'Duration (min)' },
-                    { field: 'percentage', type: 'quantitative', format: '.1f', title: 'Usage %' }
+                    { field: 'percentage', type: 'quantitative', format: '.1%', title: 'Progress %' }
                   ]
                 }
               },
@@ -552,7 +552,7 @@
           // Display stats with modern formatting
           const hours = Math.floor(totalDuration / 60);
           const minutes = Math.round(totalDuration % 60);
-          const remaining = maxDuration - totalDuration;
+          const remaining = goalDuration - totalDuration;
           const remHours = Math.floor(Math.abs(remaining) / 60);
           const remMinutes = Math.round(Math.abs(remaining) % 60);
           
@@ -594,9 +594,9 @@
               <strong>📊 Average Length:</strong> ${(totalDuration / data.length).toFixed(1)} minutes
             </div>
             <div class="stats-row">
-              <strong>${remaining >= 0 ? '✅ Time Remaining' : '⚠️ Over Limit'}:</strong> 
-              <span style="color: ${remaining >= 0 ? '#1db954' : '#ff4757'}; font-weight: 600;">
-                ${remHours}h ${remMinutes}m ${remaining < 0 ? 'over limit' : 'remaining'}
+              <strong>${remaining >= 0 ? '🎯 Goal Progress' : '🚀 Exceeded Goal'}:</strong> 
+              <span style="color: ${remaining >= 0 ? '#1db954' : '#feca57'}; font-weight: 600;">
+                ${remHours}h ${remMinutes}m ${remaining < 0 ? 'over goal' : 'to goal'}
               </span>
             </div>
           `;
