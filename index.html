@@ -168,6 +168,7 @@
         justify-content: center;
         align-items: center;
         margin-top: 20px;
+        margin-bottom: 10px;
         flex-wrap: wrap;
       }
       
@@ -380,10 +381,10 @@
       
       <!-- Duration/Progress moved to top with enhanced styling -->
       <div class="viz-container duration-primary loading" id="progress-container">
+        <div id="duration-summary" class="duration-summary"></div>
         <div id="progress-vis">
           <div class="loading-text">Loading duration information...</div>
         </div>
-        <div id="duration-summary" class="duration-summary"></div>
         <div id="stats" class="stats"></div>
       </div>
       
@@ -544,7 +545,7 @@
             </div>
           `;
           
-          // Progress Bar Visualization
+          // Progress Bar Visualization - SIMPLIFIED VERSION
           const progressData = [
             {
               label: 'Playlist Duration',
@@ -559,7 +560,7 @@
             $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
             title: '🎯 Progress to 12 Hour Goal',
             width: isMobile ? vizWidth * 0.9 : vizWidth * 0.85,
-            height: getResponsiveHeight(80),
+            height: getResponsiveHeight(60),
             autosize: {
               type: 'fit',
               contains: 'padding',
@@ -574,7 +575,7 @@
                   type: 'bar',
                   color: 'rgba(255, 255, 255, 0.05)',
                   cornerRadiusEnd: 8,
-                  height: isMobile ? 30 : 40
+                  height: isMobile ? 25 : 35
                 },
                 encoding: {
                   x: {
@@ -582,16 +583,17 @@
                     type: 'quantitative',
                     scale: { domain: [0, goalDuration] },
                     axis: {
-                      title: 'Minutes',
+                      title: null, // Remove "Minutes" label
                       format: '.0f',
                       labelAngle: 0,
-                      labelFontSize: isMobile ? 10 : 12
+                      labelFontSize: isMobile ? 10 : 12,
+                      grid: false
                     }
                   },
                   y: {
                     field: 'label',
                     type: 'nominal',
-                    axis: { title: null, labelFontSize: isMobile ? 10 : 12 }
+                    axis: { title: null, labelFontSize: 0 } // Hide y-axis label
                   }
                 }
               },
@@ -612,7 +614,7 @@
                     x1: 0, y1: 0, x2: 1, y2: 0
                   },
                   cornerRadiusEnd: 8,
-                  height: isMobile ? 30 : 40
+                  height: isMobile ? 25 : 35
                 },
                 encoding: {
                   x: {
@@ -629,33 +631,8 @@
                     { field: 'percentage', type: 'quantitative', format: '.1f', title: 'Progress (%)' }
                   ]
                 }
-              },
-              {
-                mark: {
-                  type: 'text',
-                  align: totalDuration > goalDuration * 0.9 ? 'right' : 'left',
-                  baseline: 'middle',
-                  dx: totalDuration > goalDuration * 0.9 ? -10 : 10,
-                  fontSize: isMobile ? 12 : 14,
-                  fontWeight: 'bold',
-                  color: '#ffffff'
-                },
-                encoding: {
-                  x: {
-                    field: 'value',
-                    type: 'quantitative'
-                  },
-                  y: {
-                    field: 'label',
-                    type: 'nominal'
-                  },
-                  text: {
-                    field: 'percentage',
-                    type: 'quantitative',
-                    format: '.0f'
-                  }
-                }
               }
+              // Removed the text layer that was showing the percentage on the bar
             ]
           };
           
