@@ -57,12 +57,12 @@
           const timelineData = data.map(song => {
             const features = song.reccobeats && song.reccobeats[0] ? song.reccobeats[0] : {};
             return {
-              order: song.order,
+              order: song.playlistEntry,
               name: song.name,
               addedBy: song.addedBy ? song.addedBy.id : 'unknown',
               energy: features.energy || 0,
               valence: features.valence || 0,
-              mood_energy: ((features.energy || 0) + (features.valence || 0)) / 2, // Average of energy and valence
+              mood_energy: ((features.energy || 0) + (features.valence || 0)) / 2,
               duration_minutes: song.duration / 60000
             };
           }).sort((a, b) => a.order - b.order);
@@ -73,7 +73,7 @@
           
           data.forEach(song => {
             const user = song.addedBy ? song.addedBy.id : 'unknown';
-            const duration = song.duration / 60000; // Convert to minutes
+            const duration = song.duration / 60000;
             userRuntimes[user] = (userRuntimes[user] || 0) + duration;
             totalDuration += duration;
           });
@@ -133,7 +133,11 @@
                   color: {
                     field: 'addedBy',
                     type: 'nominal',
-                    title: 'Added By'
+                    title: 'Added By',
+                    scale: {
+                      domain: ['månen', 'neo', 'rånse', 'kratos'],
+                      range: ['#e41a1c', '#377eb8', '#4daf4a', '#984ea3']
+                    }
                   },
                   tooltip: [
                     { field: 'name', type: 'nominal', title: 'Song' },
@@ -170,7 +174,10 @@
                 field: 'user',
                 type: 'nominal',
                 title: 'User',
-                scale: { scheme: 'category10' }
+                scale: {
+                  domain: ['månen', 'neo', 'rånse', 'kratos'],
+                  range: ['#e41a1c', '#377eb8', '#4daf4a', '#984ea3']
+                }
               },
               tooltip: [
                 { field: 'user', type: 'nominal', title: 'User' },
@@ -277,16 +284,27 @@
           vegaEmbed('#pie-vis', pieSpec);
           vegaEmbed('#progress-vis', progressSpec);
           
-          // Display stats
+          // Display stats with user counts
           const hours = Math.floor(totalDuration / 60);
           const minutes = Math.round(totalDuration % 60);
           const remaining = maxDuration - totalDuration;
           const remHours = Math.floor(Math.abs(remaining) / 60);
           const remMinutes = Math.round(Math.abs(remaining) % 60);
           
+          // Count songs per user
+          const songCounts = {};
+          data.forEach(song => {
+            const user = song.addedBy ? song.addedBy.id : 'unknown';
+            songCounts[user] = (songCounts[user] || 0) + 1;
+          });
+          
+          const userStats = Object.entries(songCounts)
+            .map(([user, count]) => `${user}: ${count} songs`)
+            .join(', ');
+          
           document.getElementById('stats').innerHTML = `
             <strong>Total Playlist Duration:</strong> ${hours} hours ${minutes} minutes<br>
-            <strong>Number of Songs:</strong> ${data.length}<br>
+            <strong>Number of Songs:</strong> ${data.length} (${userStats})<br>
             <strong>Average Song Length:</strong> ${(totalDuration / data.length).toFixed(1)} minutes<br>
             <strong>${remaining >= 0 ? 'Time Remaining' : 'Over Limit'}:</strong> 
             <span style="color: ${remaining >= 0 ? 'green' : 'red'}">
