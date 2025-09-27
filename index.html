@@ -2,84 +2,97 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Vega-Lite quick test</title>
+  <title>Vega-Lite quick test — debug</title>
+
+  <!-- CDN libs -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
   <style>
-    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; margin: 20px; }
-    .chart { max-width: 900px; margin-bottom: 28px; }
-    h1 { margin-bottom: 6px; }
-    p { margin-top: 0; color: #444; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; margin: 20px; color:#222 }
+    .chart { max-width: 900px; margin-bottom: 28px; border: 1px solid #eee; padding: 12px; min-height:140px; }
+    .error { color: #900; background:#ffecec; padding:10px; border-radius:6px; margin-top:8px; }
+    .meta { color:#444; margin-bottom:12px; }
+    pre { background:#f6f8fa; padding:8px; border-radius:6px; overflow:auto; }
   </style>
 </head>
 <body>
-  <h1>Vega-Lite test</h1>
-  <p>Minimal test page — replace the inline `sampleData` with your fetch to `tracks-latest.json` later.</p>
+  <h1>Vega-Lite test (debug)</h1>
+  <p class="meta">This page runs two inline test charts. If something goes wrong you'll see the error here and in the browser console.</p>
 
-  <div id="vis-scatter" class="chart"></div>
-  <div id="vis-hist" class="chart"></div>
+  <div id="vis-scatter" class="chart">Loading scatter…</div>
+  <div id="vis-hist" class="chart">Loading histogram…</div>
+
+  <div id="errors"></div>
 
   <script>
-    // Sample test data — shape similar to your Cosmos docs
-    const sampleData = [
-      { name: "Track A", danceability: 0.65, energy: 0.9, tempo: 180, valence: 0.8, addedByNickname: "Blue Fox-001" },
-      { name: "Track B", danceability: 0.45, energy: 0.6, tempo: 120, valence: 0.3, addedByNickname: "Quiet Otter-123" },
-      { name: "Track C", danceability: 0.78, energy: 0.95, tempo: 200, valence: 0.9, addedByNickname: "Swift Falcon-007" },
-      { name: "Track D", danceability: 0.30, energy: 0.25, tempo: 90, valence: 0.1, addedByNickname: "Mellow Panda-222" },
-      { name: "Track E", danceability: 0.55, energy: 0.5, tempo: 140, valence: 0.4, addedByNickname: "Sunny Wolf-010" }
-    ];
+    // tiny helper to show errors in the page
+    function showError(where, err) {
+      const div = document.getElementById('errors');
+      const block = document.createElement('div');
+      block.className = 'error';
+      block.innerHTML = '<strong>' + where + '</strong><pre>' + (err && err.stack ? err.stack : String(err)) + '</pre>';
+      div.appendChild(block);
+      console.error(where, err);
+    }
 
-    // Scatter: danceability vs energy
-    const scatterSpec = {
-      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-      "description": "Danceability vs Energy (test)",
-      "width": "container",
-      "height": 360,
-      "data": { "values": sampleData },
-      "mark": "point",
-      "encoding": {
-        "x": { "field": "danceability", "type": "quantitative", "title": "Danceability" },
-        "y": { "field": "energy", "type": "quantitative", "title": "Energy" },
-        "size": { "field": "tempo", "type": "quantitative", "title": "Tempo" },
-        "color": { "field": "valence", "type": "quantitative", "title": "Valence" },
-        "tooltip": [
-          { "field": "name", "type": "nominal", "title": "Track" },
-          { "field": "addedByNickname", "type": "nominal", "title": "Added by" },
-          { "field": "tempo", "type": "quantitative", "title": "Tempo" }
-        ]
+    window.addEventListener('DOMContentLoaded', () => {
+      try {
+        if (typeof vegaEmbed !== 'function') {
+          throw new Error('vegaEmbed not found. Check the CDN script tags for vega / vega-lite / vega-embed.');
+        }
+
+        const sampleData = [
+          { name: "Track A", danceability: 0.65, energy: 0.9, tempo: 180, valence: 0.8, addedByNickname: "Blue Fox-001" },
+          { name: "Track B", danceability: 0.45, energy: 0.6, tempo: 120, valence: 0.3, addedByNickname: "Quiet Otter-123" },
+          { name: "Track C", danceability: 0.78, energy: 0.95, tempo: 200, valence: 0.9, addedByNickname: "Swift Falcon-007" },
+          { name: "Track D", danceability: 0.30, energy: 0.25, tempo: 90, valence: 0.1, addedByNickname: "Mellow Panda-222" },
+          { name: "Track E", danceability: 0.55, energy: 0.5, tempo: 140, valence: 0.4, addedByNickname: "Sunny Wolf-010" }
+        ];
+
+        const scatterSpec = {
+          "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+          "description": "Danceability vs Energy (test)",
+          "width": "container",
+          "height": 360,
+          "data": { "values": sampleData },
+          "mark": "point",
+          "encoding": {
+            "x": { "field": "danceability", "type": "quantitative", "title": "Danceability" },
+            "y": { "field": "energy", "type": "quantitative", "title": "Energy" },
+            "size": { "field": "tempo", "type": "quantitative", "title": "Tempo" },
+            "color": { "field": "valence", "type": "quantitative", "title": "Valence" },
+            "tooltip": [
+              { "field": "name", "type": "nominal", "title": "Track" },
+              { "field": "addedByNickname", "type": "nominal", "title": "Added by" },
+              { "field": "tempo", "type": "quantitative", "title": "Tempo" }
+            ]
+          }
+        };
+
+        const histSpec = {
+          "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+          "description": "Tempo distribution (test)",
+          "width": "container",
+          "height": 160,
+          "data": { "values": sampleData },
+          "mark": "bar",
+          "encoding": {
+            "x": { "field": "tempo", "bin": true, "type": "quantitative", "title": "Tempo (BPM)" },
+            "y": { "aggregate": "count", "type": "quantitative", "title": "Count" },
+            "tooltip": [{ "aggregate": "count", "type": "quantitative", "title": "Count" }]
+          }
+        };
+
+        // Render charts, but catch any per-chart errors and show them in UI
+        vegaEmbed("#vis-scatter", scatterSpec, { actions: true }).catch(err => showError('Scatter render error', err));
+        vegaEmbed("#vis-hist", histSpec, { actions: true }).catch(err => showError('Histogram render error', err));
+
+      } catch (err) {
+        showError('Initialization error', err);
       }
-    };
-
-    // Histogram: tempo distribution
-    const histSpec = {
-      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-      "description": "Tempo distribution (test)",
-      "width": "container",
-      "height": 160,
-      "data": { "values": sampleData },
-      "mark": "bar",
-      "encoding": {
-        "x": { "field": "tempo", "bin": true, "type": "quantitative", "title": "Tempo (BPM)" },
-        "y": { "aggregate": "count", "type": "quantitative", "title": "Count" },
-        "tooltip": [{ "aggregate": "count", "type": "quantitative", "title": "Count" }]
-      }
-    };
-
-    // Render both charts
-    vegaEmbed("#vis-scatter", scatterSpec, { actions: true }).catch(e => console.error(e));
-    vegaEmbed("#vis-hist", histSpec, { actions: true }).catch(e => console.error(e));
-
-    // === When your data is ready: replace the inline data with a fetch, e.g.
-    // fetch("https://your-cdn.example.com/tracks-latest.json", { cache: "no-store" })
-    //   .then(r => r.json())
-    //   .then(json => {
-    //     const items = json.items ?? json;
-    //     scatterSpec.data = { values: items };
-    //     histSpec.data = { values: items };
-    //     vegaEmbed("#vis-scatter", scatterSpec);
-    //     vegaEmbed("#vis-hist", histSpec);
-    //   });
+    });
   </script>
 </body>
 </html>
