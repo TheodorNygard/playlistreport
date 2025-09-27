@@ -1,7 +1,7 @@
 [
     {
         "id": "6cLrGfKIIRHYQw7S0mCDhA",
-        "order": 26,
+        "playlistEntry": 26,
         "name": "All That Really Matters",
         "addedBy": {
             "id": "prancey"
@@ -24,16 +24,11 @@
                 "valence": 0.227
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NS1AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NS1AAAAAAAAAA==/",
-        "_etag": "\"1b01ba81-0000-3c00-0000-68d7ba130000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968339
+        "origin": "analyzeplaylist"
     },
     {
         "id": "4z80Wk5401Bt5MA9MZU5NW",
-        "order": 37,
+        "playlistEntry": 37,
         "name": "Like A Friend",
         "addedBy": {
             "id": "prancey"
@@ -56,16 +51,11 @@
                 "valence": 0.345
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NS2AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NS2AAAAAAAAAA==/",
-        "_etag": "\"1b01bc84-0000-3c00-0000-68d7ba190000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968345
+        "origin": "analyzeplaylist"
     },
     {
         "id": "6RUpJeXT6U4SPEafnr9Wr7",
-        "order": 33,
+        "playlistEntry": 33,
         "name": "Where The Hood At",
         "addedBy": {
             "id": "prancey"
@@ -88,16 +78,11 @@
                 "valence": 0.791
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NS3AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NS3AAAAAAAAAA==/",
-        "_etag": "\"1b019384-0000-3c00-0000-68d7ba160000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968342
+        "origin": "analyzeplaylist"
     },
     {
         "id": "5fHgBb5r91Jmdr8Q7dwmad",
-        "order": 25,
+        "playlistEntry": 25,
         "name": "Secunda",
         "addedBy": {
             "id": "danielbratsberg"
@@ -120,16 +105,11 @@
                 "valence": 0.088
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NS4AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NS4AAAAAAAAAA==/",
-        "_etag": "\"1b01b981-0000-3c00-0000-68d7ba120000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968338
+        "origin": "analyzeplaylist"
     },
     {
         "id": "2kkvB3RNRzwjFdGhaUA0tz",
-        "order": 27,
+        "playlistEntry": 27,
         "name": "Layla",
         "addedBy": {
             "id": "prancey"
@@ -152,16 +132,11 @@
                 "valence": 0.497
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NS5AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NS5AAAAAAAAAA==/",
-        "_etag": "\"1b01bb81-0000-3c00-0000-68d7ba130000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968339
+        "origin": "analyzeplaylist"
     },
     {
         "id": "5cjaDxaXyRlxGgGjRlte7m",
-        "order": 36,
+        "playlistEntry": 36,
         "name": "Daydream In Blue",
         "addedBy": {
             "id": "prancey"
@@ -184,16 +159,11 @@
                 "valence": 0.382
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NS6AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NS6AAAAAAAAAA==/",
-        "_etag": "\"1b01ba84-0000-3c00-0000-68d7ba180000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968344
+        "origin": "analyzeplaylist"
     },
     {
         "id": "5hiZJE6Fg14Wao6EJ0KUC8",
-        "order": 40,
+        "playlistEntry": 40,
         "name": "West Hills",
         "addedBy": {
             "id": "prancey"
@@ -216,16 +186,11 @@
                 "valence": 0.19
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NS7AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NS7AAAAAAAAAA==/",
-        "_etag": "\"1b01c584-0000-3c00-0000-68d7ba1b0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968347
+        "origin": "analyzeplaylist"
     },
     {
         "id": "1WZ43lepi3dDtruxqeaZpg",
-        "order": 22,
+        "playlistEntry": 22,
         "name": "Nightmare",
         "addedBy": {
             "id": "danielbratsberg"
@@ -248,16 +213,11 @@
                 "valence": 0.161
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NS8AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NS8AAAAAAAAAA==/",
-        "_etag": "\"1b01b681-0000-3c00-0000-68d7ba100000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968336
+        "origin": "analyzeplaylist"
     },
     {
         "id": "30KctD1WsHKTIYczXjip5a",
-        "order": 32,
+        "playlistEntry": 32,
         "name": "Tequila Shots",
         "addedBy": {
             "id": "prancey"
@@ -280,32 +240,22 @@
                 "valence": 0.22
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NS9AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NS9AAAAAAAAAA==/",
-        "_etag": "\"1b019284-0000-3c00-0000-68d7ba160000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968342
+        "origin": "analyzeplaylist"
     },
     {
         "id": "19HjHUjCfDrEYhVSIKG6nK",
-        "order": 28,
+        "playlistEntry": 28,
         "name": "I'd Love to Change the World - 2004 Remaster",
         "addedBy": {
             "id": "prancey"
         },
         "duration": 224133,
         "reccobeats": [],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NS+AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NS+AAAAAAAAAA==/",
-        "_etag": "\"1b01be81-0000-3c00-0000-68d7ba140000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968340
+        "origin": "analyzeplaylist"
     },
     {
         "id": "4jNQkWhuzqrbqQuqanFFJ6",
-        "order": 35,
+        "playlistEntry": 35,
         "name": "Where Is My Mind",
         "addedBy": {
             "id": "prancey"
@@ -328,32 +278,22 @@
                 "valence": 0.0566
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NS-AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NS-AAAAAAAAAA==/",
-        "_etag": "\"1b01b984-0000-3c00-0000-68d7ba180000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968344
+        "origin": "analyzeplaylist"
     },
     {
         "id": "6koM1FpvhqKn3jiCKzM2Rw",
-        "order": 29,
+        "playlistEntry": 29,
         "name": "Sailing Ships - 2009 Remaster",
         "addedBy": {
             "id": "prancey"
         },
         "duration": 366666,
         "reccobeats": [],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTAAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTAAAAAAAAAAA==/",
-        "_etag": "\"1b01c081-0000-3c00-0000-68d7ba140000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968340
+        "origin": "analyzeplaylist"
     },
     {
         "id": "6FLwmdmW77N1Pxb1aWsZmO",
-        "order": 24,
+        "playlistEntry": 24,
         "name": "Only Time",
         "addedBy": {
             "id": "danielbratsberg"
@@ -376,16 +316,11 @@
                 "valence": 0.213
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTBAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTBAAAAAAAAAA==/",
-        "_etag": "\"1b01b881-0000-3c00-0000-68d7ba120000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968338
+        "origin": "analyzeplaylist"
     },
     {
         "id": "56oReVXIfUO9xkX7pHmEU0",
-        "order": 34,
+        "playlistEntry": 34,
         "name": "On the Nature of Daylight",
         "addedBy": {
             "id": "prancey"
@@ -408,16 +343,11 @@
                 "valence": 0.0335
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTCAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTCAAAAAAAAAA==/",
-        "_etag": "\"1b019484-0000-3c00-0000-68d7ba170000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968343
+        "origin": "analyzeplaylist"
     },
     {
         "id": "2KHRENHQzTIQ001nlP9Gdc",
-        "order": 38,
+        "playlistEntry": 38,
         "name": "Contact",
         "addedBy": {
             "id": "prancey"
@@ -440,16 +370,11 @@
                 "valence": 0.0924
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTDAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTDAAAAAAAAAA==/",
-        "_etag": "\"1b01bf84-0000-3c00-0000-68d7ba1a0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968346
+        "origin": "analyzeplaylist"
     },
     {
         "id": "5EWPGh7jbTNO2wakv8LjUI",
-        "order": 30,
+        "playlistEntry": 30,
         "name": "Free Bird",
         "addedBy": {
             "id": "prancey"
@@ -472,16 +397,11 @@
                 "valence": 0.337
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTEAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTEAAAAAAAAAA==/",
-        "_etag": "\"1b018a82-0000-3c00-0000-68d7ba150000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968341
+        "origin": "analyzeplaylist"
     },
     {
         "id": "3Q0BnUlTqP73WDYPtGQB6n",
-        "order": 21,
+        "playlistEntry": 21,
         "name": "mazamun",
         "addedBy": {
             "id": "danielbratsberg"
@@ -504,16 +424,11 @@
                 "valence": 0.122
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTFAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTFAAAAAAAAAA==/",
-        "_etag": "\"1b01b581-0000-3c00-0000-68d7ba100000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968336
+        "origin": "analyzeplaylist"
     },
     {
         "id": "79koEJRtKOOGJ0VSAF3FMk",
-        "order": 39,
+        "playlistEntry": 39,
         "name": "Motherboard",
         "addedBy": {
             "id": "prancey"
@@ -536,16 +451,11 @@
                 "valence": 0.284
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTGAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTGAAAAAAAAAA==/",
-        "_etag": "\"1b01c084-0000-3c00-0000-68d7ba1b0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968347
+        "origin": "analyzeplaylist"
     },
     {
         "id": "393MDhe62s8hbH8ETrlxe5",
-        "order": 31,
+        "playlistEntry": 31,
         "name": "Mr. Rager",
         "addedBy": {
             "id": "prancey"
@@ -568,16 +478,11 @@
                 "valence": 0.581
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTHAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTHAAAAAAAAAA==/",
-        "_etag": "\"1b01b783-0000-3c00-0000-68d7ba160000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968342
+        "origin": "analyzeplaylist"
     },
     {
         "id": "5oiryCkHq62PvgLBrVFAmj",
-        "order": 23,
+        "playlistEntry": 23,
         "name": "田",
         "addedBy": {
             "id": "danielbratsberg"
@@ -600,16 +505,11 @@
                 "valence": 0.194
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTIAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTIAAAAAAAAAA==/",
-        "_etag": "\"1b01b781-0000-3c00-0000-68d7ba110000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968337
+        "origin": "analyzeplaylist"
     },
     {
         "id": "3Jq9rsqmRtqcVKtzP9dnxZ",
-        "order": 57,
+        "playlistEntry": 57,
         "name": "The Man Comes Around",
         "addedBy": {
             "id": "jakobask89"
@@ -632,16 +532,11 @@
                 "valence": 0.753
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTJAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTJAAAAAAAAAA==/",
-        "_etag": "\"1b01d78a-0000-3c00-0000-68d7ba260000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968358
+        "origin": "analyzeplaylist"
     },
     {
         "id": "2BY7ALEWdloFHgQZG6VMLA",
-        "order": 77,
+        "playlistEntry": 77,
         "name": "Brandy (You're a Fine Girl)",
         "addedBy": {
             "id": "prancey"
@@ -664,16 +559,11 @@
                 "valence": 0.826
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTKAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTKAAAAAAAAAA==/",
-        "_etag": "\"1b01238d-0000-3c00-0000-68d7ba2f0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968367
+        "origin": "analyzeplaylist"
     },
     {
         "id": "4S0zagxseJHOL5ZVnTQA6X",
-        "order": 53,
+        "playlistEntry": 53,
         "name": "Playing God",
         "addedBy": {
             "id": "prancey"
@@ -696,16 +586,11 @@
                 "valence": 0.315
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTLAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTLAAAAAAAAAA==/",
-        "_etag": "\"1b015689-0000-3c00-0000-68d7ba240000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968356
+        "origin": "analyzeplaylist"
     },
     {
         "id": "1zc8RKNRyUYrwskkK88i4W",
-        "order": 45,
+        "playlistEntry": 45,
         "name": "Otherworlds",
         "addedBy": {
             "id": "prancey"
@@ -728,16 +613,11 @@
                 "valence": 0.21
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTMAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTMAAAAAAAAAA==/",
-        "_etag": "\"1b019f85-0000-3c00-0000-68d7ba1f0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968351
+        "origin": "analyzeplaylist"
     },
     {
         "id": "5RNGOlGqKBawkqLfdJqiqA",
-        "order": 46,
+        "playlistEntry": 46,
         "name": "Nothing Is Something Worth Doing",
         "addedBy": {
             "id": "prancey"
@@ -760,16 +640,11 @@
                 "valence": 0.247
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTNAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTNAAAAAAAAAA==/",
-        "_etag": "\"1b01ff85-0000-3c00-0000-68d7ba200000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968352
+        "origin": "analyzeplaylist"
     },
     {
         "id": "4b6SQbJwMSTpUJtbSjOlwN",
-        "order": 56,
+        "playlistEntry": 56,
         "name": "The Score Evolved: Reel 1 (Diary)",
         "addedBy": {
             "id": "arieloygarden"
@@ -792,48 +667,33 @@
                 "valence": 0.039
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTOAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTOAAAAAAAAAA==/",
-        "_etag": "\"1b01738a-0000-3c00-0000-68d7ba250000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968357
+        "origin": "analyzeplaylist"
     },
     {
         "id": "3K3gJEbDUQPUIhw15MytrL",
-        "order": 47,
+        "playlistEntry": 47,
         "name": "Love S.O.S",
         "addedBy": {
             "id": "prancey"
         },
         "duration": 303823,
         "reccobeats": [],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTPAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTPAAAAAAAAAA==/",
-        "_etag": "\"1b016986-0000-3c00-0000-68d7ba200000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968352
+        "origin": "analyzeplaylist"
     },
     {
         "id": "3M7GpQ5zTlaRhDuizaxjAd",
-        "order": 42,
+        "playlistEntry": 42,
         "name": "What Could Have Been",
         "addedBy": {
             "id": "arieloygarden"
         },
         "duration": 216000,
         "reccobeats": [],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTQAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTQAAAAAAAAAA==/",
-        "_etag": "\"1b01c884-0000-3c00-0000-68d7ba1d0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968349
+        "origin": "analyzeplaylist"
     },
     {
         "id": "59Cd0l0UvKOigbwJVIhQA9",
-        "order": 52,
+        "playlistEntry": 52,
         "name": "March of Progress",
         "addedBy": {
             "id": "prancey"
@@ -856,16 +716,11 @@
                 "valence": 0.046
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTRAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTRAAAAAAAAAA==/",
-        "_etag": "\"1b01ec88-0000-3c00-0000-68d7ba230000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968355
+        "origin": "analyzeplaylist"
     },
     {
         "id": "68Rnp6Cev6ESnEwlpQI2Ll",
-        "order": 60,
+        "playlistEntry": 60,
         "name": "Trampoline - Jauz Remix",
         "addedBy": {
             "id": "jakobask89"
@@ -888,16 +743,11 @@
                 "valence": 0.119
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTSAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTSAAAAAAAAAA==/",
-        "_etag": "\"1b013d8b-0000-3c00-0000-68d7ba270000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968359
+        "origin": "analyzeplaylist"
     },
     {
         "id": "6gzegpwruMz6a0LzeRpF4L",
-        "order": 49,
+        "playlistEntry": 49,
         "name": "Just The Two Of Us",
         "addedBy": {
             "id": "arieloygarden"
@@ -920,16 +770,11 @@
                 "valence": 0.65
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTTAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTTAAAAAAAAAA==/",
-        "_etag": "\"1b018e87-0000-3c00-0000-68d7ba220000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968354
+        "origin": "analyzeplaylist"
     },
     {
         "id": "7jWbXvrgdbkajU8L28ahn5",
-        "order": 55,
+        "playlistEntry": 55,
         "name": "Highwayman",
         "addedBy": {
             "id": "prancey"
@@ -952,16 +797,11 @@
                 "valence": 0.45
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTUAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTUAAAAAAAAAA==/",
-        "_etag": "\"1b01238a-0000-3c00-0000-68d7ba250000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968357
+        "origin": "analyzeplaylist"
     },
     {
         "id": "0T7e4R5tXvu0CYf8yRR75k",
-        "order": 44,
+        "playlistEntry": 44,
         "name": "Children of the Omnissiah",
         "addedBy": {
             "id": "prancey"
@@ -984,16 +824,11 @@
                 "valence": 0.0529
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTVAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTVAAAAAAAAAA==/",
-        "_etag": "\"1b014685-0000-3c00-0000-68d7ba1f0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968351
+        "origin": "analyzeplaylist"
     },
     {
         "id": "2FGWXLeSSVWZlf7sh5A6te",
-        "order": 48,
+        "playlistEntry": 48,
         "name": "Magnum Bullets",
         "addedBy": {
             "id": "prancey"
@@ -1016,16 +851,11 @@
                 "valence": 0.312
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTWAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTWAAAAAAAAAA==/",
-        "_etag": "\"1b01e186-0000-3c00-0000-68d7ba210000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968353
+        "origin": "analyzeplaylist"
     },
     {
         "id": "28cnXtME493VX9NOw9cIUh",
-        "order": 58,
+        "playlistEntry": 58,
         "name": "Hurt",
         "addedBy": {
             "id": "jakobask89"
@@ -1048,16 +878,11 @@
                 "valence": 0.163
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTXAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTXAAAAAAAAAA==/",
-        "_etag": "\"1b01d88a-0000-3c00-0000-68d7ba260000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968358
+        "origin": "analyzeplaylist"
     },
     {
         "id": "3WattXYKPa1N4sDqTvSrLS",
-        "order": 50,
+        "playlistEntry": 50,
         "name": "ABC (feat. Sophia Black)",
         "addedBy": {
             "id": "arieloygarden"
@@ -1080,16 +905,11 @@
                 "valence": 0.75
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTYAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTYAAAAAAAAAA==/",
-        "_etag": "\"1b011c88-0000-3c00-0000-68d7ba220000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968354
+        "origin": "analyzeplaylist"
     },
     {
         "id": "2B3D38o8GaXnZo6DnTyZ2m",
-        "order": 54,
+        "playlistEntry": 54,
         "name": "Ego Death (feat. Steve Vai)",
         "addedBy": {
             "id": "prancey"
@@ -1112,48 +932,33 @@
                 "valence": 0.445
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTZAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTZAAAAAAAAAA==/",
-        "_etag": "\"1b01b689-0000-3c00-0000-68d7ba240000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968356
+        "origin": "analyzeplaylist"
     },
     {
         "id": "5B6DrPM6zV3KBzVc4zutSD",
-        "order": 59,
+        "playlistEntry": 59,
         "name": "Monument",
         "addedBy": {
             "id": "jakobask89"
         },
         "duration": 597402,
         "reccobeats": [],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTaAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTaAAAAAAAAAA==/",
-        "_etag": "\"1b01db8a-0000-3c00-0000-68d7ba270000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968359
+        "origin": "analyzeplaylist"
     },
     {
         "id": "53HfrsMsyr4lgfZDYShuSI",
-        "order": 41,
+        "playlistEntry": 41,
         "name": "Static Existence",
         "addedBy": {
             "id": "arieloygarden"
         },
         "duration": 224347,
         "reccobeats": [],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTbAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTbAAAAAAAAAA==/",
-        "_etag": "\"1b01c784-0000-3c00-0000-68d7ba1d0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968349
+        "origin": "analyzeplaylist"
     },
     {
         "id": "2Y9RAmdnWY3MhNM9PyCPnF",
-        "order": 51,
+        "playlistEntry": 51,
         "name": "Ephemer",
         "addedBy": {
             "id": "prancey"
@@ -1176,16 +981,11 @@
                 "valence": 0.122
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTcAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTcAAAAAAAAAA==/",
-        "_etag": "\"1b017e88-0000-3c00-0000-68d7ba230000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968355
+        "origin": "analyzeplaylist"
     },
     {
         "id": "045Osw8XePmM72u5WXMyIW",
-        "order": 43,
+        "playlistEntry": 43,
         "name": "Goblins",
         "addedBy": {
             "id": "prancey"
@@ -1208,32 +1008,22 @@
                 "valence": 0.41
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTdAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTdAAAAAAAAAA==/",
-        "_etag": "\"1b01c984-0000-3c00-0000-68d7ba1e0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968350
+        "origin": "analyzeplaylist"
     },
     {
         "id": "4JgBnOaM6SndTiH4mbWQhS",
-        "order": 73,
+        "playlistEntry": 73,
         "name": "So Ambiguous",
         "addedBy": {
             "id": "prancey"
         },
         "duration": 366832,
         "reccobeats": [],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTeAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTeAAAAAAAAAA==/",
-        "_etag": "\"1b011f8d-0000-3c00-0000-68d7ba2d0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968365
+        "origin": "analyzeplaylist"
     },
     {
         "id": "1nezQ0LsB9vgmKCLF4zlLC",
-        "order": 66,
+        "playlistEntry": 66,
         "name": "Bink's Brew (A Sea Shanty from \"One Piece\")",
         "addedBy": {
             "id": "jakobask89"
@@ -1256,16 +1046,11 @@
                 "valence": 0.766
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTfAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTfAAAAAAAAAA==/",
-        "_etag": "\"1b01178d-0000-3c00-0000-68d7ba2a0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968362
+        "origin": "analyzeplaylist"
     },
     {
         "id": "0c6kwstJOxLsEYcjtdS7TT",
-        "order": 65,
+        "playlistEntry": 65,
         "name": "Drums Of Liberation Theme - Epic Version",
         "addedBy": {
             "id": "jakobask89"
@@ -1288,16 +1073,11 @@
                 "valence": 0.203
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTgAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTgAAAAAAAAAA==/",
-        "_etag": "\"1b01168d-0000-3c00-0000-68d7ba290000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968361
+        "origin": "analyzeplaylist"
     },
     {
         "id": "596DO7Czmqib9aHtYNkE3I",
-        "order": 67,
+        "playlistEntry": 67,
         "name": "Helvegen",
         "addedBy": {
             "id": "prancey"
@@ -1320,16 +1100,11 @@
                 "valence": 0.0663
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NThAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NThAAAAAAAAAA==/",
-        "_etag": "\"1b01188d-0000-3c00-0000-68d7ba2a0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968362
+        "origin": "analyzeplaylist"
     },
     {
         "id": "0boS4e6uXwp3zAvz1mLxZS",
-        "order": 76,
+        "playlistEntry": 76,
         "name": "Run Boy Run",
         "addedBy": {
             "id": "prancey"
@@ -1352,16 +1127,11 @@
                 "valence": 0.34
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTiAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTiAAAAAAAAAA==/",
-        "_etag": "\"1b01228d-0000-3c00-0000-68d7ba2f0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968367
+        "origin": "analyzeplaylist"
     },
     {
         "id": "3skn2lauGk7Dx6bVIt5DVj",
-        "order": 69,
+        "playlistEntry": 69,
         "name": "Starlight",
         "addedBy": {
             "id": "prancey"
@@ -1384,32 +1154,22 @@
                 "valence": 0.318
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTjAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTjAAAAAAAAAA==/",
-        "_etag": "\"1b011b8d-0000-3c00-0000-68d7ba2b0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968363
+        "origin": "analyzeplaylist"
     },
     {
         "id": "1B8nIA7Kz1WmetykZTcCF4",
-        "order": 80,
+        "playlistEntry": 80,
         "name": "Freedom for a Change",
         "addedBy": {
             "id": "prancey"
         },
         "duration": 158600,
         "reccobeats": [],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTkAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTkAAAAAAAAAA==/",
-        "_etag": "\"1b01268d-0000-3c00-0000-68d7ba310000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968369
+        "origin": "analyzeplaylist"
     },
     {
         "id": "5Th1M56eghmCZ09EfAKha7",
-        "order": 62,
+        "playlistEntry": 62,
         "name": "Money Ties",
         "addedBy": {
             "id": "jakobask89"
@@ -1432,16 +1192,11 @@
                 "valence": 0.735
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTlAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTlAAAAAAAAAA==/",
-        "_etag": "\"1b01068c-0000-3c00-0000-68d7ba280000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968360
+        "origin": "analyzeplaylist"
     },
     {
         "id": "0WSa1sucoNRcEeULlZVQXj",
-        "order": 64,
+        "playlistEntry": 64,
         "name": "Can You Feel My Heart",
         "addedBy": {
             "id": "jakobask89"
@@ -1464,16 +1219,11 @@
                 "valence": 0.354
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTmAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTmAAAAAAAAAA==/",
-        "_etag": "\"1b01dd8c-0000-3c00-0000-68d7ba290000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968361
+        "origin": "analyzeplaylist"
     },
     {
         "id": "0T57cTUpYpvSvZ3GowBuTP",
-        "order": 72,
+        "playlistEntry": 72,
         "name": "Never Let Me Down Again",
         "addedBy": {
             "id": "prancey"
@@ -1496,16 +1246,11 @@
                 "valence": 0.577
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTnAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTnAAAAAAAAAA==/",
-        "_etag": "\"1b011e8d-0000-3c00-0000-68d7ba2d0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968365
+        "origin": "analyzeplaylist"
     },
     {
         "id": "40riOy7x9W7GXjyGp4pjAv",
-        "order": 78,
+        "playlistEntry": 78,
         "name": "Hotel California - 2013 Remaster",
         "addedBy": {
             "id": "prancey"
@@ -1528,16 +1273,11 @@
                 "valence": 0.609
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NToAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NToAAAAAAAAAA==/",
-        "_etag": "\"1b01248d-0000-3c00-0000-68d7ba300000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968368
+        "origin": "analyzeplaylist"
     },
     {
         "id": "71Ci9E79HpYkqpnl9zSUOQ",
-        "order": 75,
+        "playlistEntry": 75,
         "name": "In This Shirt - Royksopp Remix",
         "addedBy": {
             "id": "prancey"
@@ -1560,16 +1300,11 @@
                 "valence": 0.0358
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTpAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTpAAAAAAAAAA==/",
-        "_etag": "\"1b01218d-0000-3c00-0000-68d7ba2e0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968366
+        "origin": "analyzeplaylist"
     },
     {
         "id": "1n1y2kFPISpF9WGD3JaFo5",
-        "order": 68,
+        "playlistEntry": 68,
         "name": "Suzume",
         "addedBy": {
             "id": "jakobask89"
@@ -1592,16 +1327,11 @@
                 "valence": 0.36
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTqAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTqAAAAAAAAAA==/",
-        "_etag": "\"1b01198d-0000-3c00-0000-68d7ba2b0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968363
+        "origin": "analyzeplaylist"
     },
     {
         "id": "0qHD5pzpp1zSPa5Ud74WDC",
-        "order": 79,
+        "playlistEntry": 79,
         "name": "Ghostkeeper",
         "addedBy": {
             "id": "prancey"
@@ -1624,48 +1354,33 @@
                 "valence": 0.514
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTrAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTrAAAAAAAAAA==/",
-        "_etag": "\"1b01258d-0000-3c00-0000-68d7ba300000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968368
+        "origin": "analyzeplaylist"
     },
     {
         "id": "3t4qyMVnN9o0ZJhsUaa465",
-        "order": 70,
+        "playlistEntry": 70,
         "name": "Avalanche",
         "addedBy": {
             "id": "prancey"
         },
         "duration": 302013,
         "reccobeats": [],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTsAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTsAAAAAAAAAA==/",
-        "_etag": "\"1b011c8d-0000-3c00-0000-68d7ba2c0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968364
+        "origin": "analyzeplaylist"
     },
     {
         "id": "0U6dCC5t2Eu137IybtAWBq",
-        "order": 74,
+        "playlistEntry": 74,
         "name": "This Time, This Place…",
         "addedBy": {
             "id": "prancey"
         },
         "duration": 464200,
         "reccobeats": [],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTtAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTtAAAAAAAAAA==/",
-        "_etag": "\"1b01208d-0000-3c00-0000-68d7ba2e0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968366
+        "origin": "analyzeplaylist"
     },
     {
         "id": "432hUIl3ISDeytYW5XBQ5h",
-        "order": 63,
+        "playlistEntry": 63,
         "name": "Wolves",
         "addedBy": {
             "id": "jakobask89"
@@ -1688,16 +1403,11 @@
                 "valence": 0.103
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTuAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTuAAAAAAAAAA==/",
-        "_etag": "\"1b017d8c-0000-3c00-0000-68d7ba290000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968361
+        "origin": "analyzeplaylist"
     },
     {
         "id": "0jXvMYQQ0x9uhFJbKs8u4w",
-        "order": 71,
+        "playlistEntry": 71,
         "name": "The Ecstasy of Gold",
         "addedBy": {
             "id": "prancey"
@@ -1720,32 +1430,22 @@
                 "valence": 0.142
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTvAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTvAAAAAAAAAA==/",
-        "_etag": "\"1b011d8d-0000-3c00-0000-68d7ba2c0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968364
+        "origin": "analyzeplaylist"
     },
     {
         "id": "4VZH6OfxPy1nNE7KbtVKyK",
-        "order": 61,
+        "playlistEntry": 61,
         "name": "Fearless Pt. II",
         "addedBy": {
             "id": "jakobask89"
         },
         "duration": 194181,
         "reccobeats": [],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTwAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTwAAAAAAAAAA==/",
-        "_etag": "\"1b01a18b-0000-3c00-0000-68d7ba280000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968360
+        "origin": "analyzeplaylist"
     },
     {
         "id": "007HrgSq8aZaq08vSPa2bf",
-        "order": 14,
+        "playlistEntry": 14,
         "name": "a thousand stars, falling to the earth",
         "addedBy": {
             "id": "arieloygarden"
@@ -1768,16 +1468,11 @@
                 "valence": 0.0513
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTxAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTxAAAAAAAAAA==/",
-        "_etag": "\"1b01ae81-0000-3c00-0000-68d7ba0d0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968333
+        "origin": "analyzeplaylist"
     },
     {
         "id": "3s6Xo43bscaq99d5l8fKbh",
-        "order": 16,
+        "playlistEntry": 16,
         "name": "Memories",
         "addedBy": {
             "id": "arieloygarden"
@@ -1800,16 +1495,11 @@
                 "valence": 0.105
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTyAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTyAAAAAAAAAA==/",
-        "_etag": "\"1b01b081-0000-3c00-0000-68d7ba0e0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968334
+        "origin": "analyzeplaylist"
     },
     {
         "id": "2dgs42huy1icFQJelUjDKu",
-        "order": 3,
+        "playlistEntry": 3,
         "name": "Right This Second",
         "addedBy": {
             "id": "prancey"
@@ -1832,16 +1522,11 @@
                 "valence": 0.0275
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NTzAAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NTzAAAAAAAAAA==/",
-        "_etag": "\"1b01a181-0000-3c00-0000-68d7ba070000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968327
+        "origin": "analyzeplaylist"
     },
     {
         "id": "2ThS82RFj5GcH07OOd1AYa",
-        "order": 2,
+        "playlistEntry": 2,
         "name": "Outsider",
         "addedBy": {
             "id": "prancey"
@@ -1864,32 +1549,22 @@
                 "valence": 0.0727
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NT0AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NT0AAAAAAAAAA==/",
-        "_etag": "\"1b01a081-0000-3c00-0000-68d7ba060000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968326
+        "origin": "analyzeplaylist"
     },
     {
         "id": "1Ic75bJnvNE3zpE7qZg7aA",
-        "order": 4,
+        "playlistEntry": 4,
         "name": "Free Tibet - Vini Vici Remix",
         "addedBy": {
             "id": "prancey"
         },
         "duration": 474782,
         "reccobeats": [],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NT1AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NT1AAAAAAAAAA==/",
-        "_etag": "\"1b01a281-0000-3c00-0000-68d7ba070000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968327
+        "origin": "analyzeplaylist"
     },
     {
         "id": "6IiDZInzA2Ecv2UoIXhhQ3",
-        "order": 15,
+        "playlistEntry": 15,
         "name": "Borders",
         "addedBy": {
             "id": "arieloygarden"
@@ -1912,16 +1587,11 @@
                 "valence": 0.0408
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NT2AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NT2AAAAAAAAAA==/",
-        "_etag": "\"1b01af81-0000-3c00-0000-68d7ba0d0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968333
+        "origin": "analyzeplaylist"
     },
     {
         "id": "5zheSFviZNgeZLvZCOxQnE",
-        "order": 13,
+        "playlistEntry": 13,
         "name": "See Her Out (Thats Just Life)",
         "addedBy": {
             "id": "arieloygarden"
@@ -1944,16 +1614,11 @@
                 "valence": 0.362
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NT3AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NT3AAAAAAAAAA==/",
-        "_etag": "\"1b01ad81-0000-3c00-0000-68d7ba0c0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968332
+        "origin": "analyzeplaylist"
     },
     {
         "id": "24V9V4erGgsbLeSa7tlimK",
-        "order": 1,
+        "playlistEntry": 1,
         "name": "My Name Is Lincoln",
         "addedBy": {
             "id": "prancey"
@@ -1976,16 +1641,11 @@
                 "valence": 0.105
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NT4AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NT4AAAAAAAAAA==/",
-        "_etag": "\"1b019f81-0000-3c00-0000-68d7ba060000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968326
+        "origin": "analyzeplaylist"
     },
     {
         "id": "3a6PN6BRB8PP3ms48s7kU1",
-        "order": 19,
+        "playlistEntry": 19,
         "name": "Empire Ants (feat. Little Dragon)",
         "addedBy": {
             "id": "danielbratsberg"
@@ -2008,16 +1668,11 @@
                 "valence": 0.294
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NT5AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NT5AAAAAAAAAA==/",
-        "_etag": "\"1b01b381-0000-3c00-0000-68d7ba0f0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968335
+        "origin": "analyzeplaylist"
     },
     {
         "id": "4KLTJBsPLOFsNsnGHivuX2",
-        "order": 17,
+        "playlistEntry": 17,
         "name": "Brave New World",
         "addedBy": {
             "id": "danielbratsberg"
@@ -2040,16 +1695,11 @@
                 "valence": 0.181
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NT6AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NT6AAAAAAAAAA==/",
-        "_etag": "\"1b01b181-0000-3c00-0000-68d7ba0e0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968334
+        "origin": "analyzeplaylist"
     },
     {
         "id": "4FLKKYFdKb4ChNVC6us3oG",
-        "order": 18,
+        "playlistEntry": 18,
         "name": "The State of the World",
         "addedBy": {
             "id": "danielbratsberg"
@@ -2072,16 +1722,11 @@
                 "valence": 0.269
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NT7AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NT7AAAAAAAAAA==/",
-        "_etag": "\"1b01b281-0000-3c00-0000-68d7ba0f0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968335
+        "origin": "analyzeplaylist"
     },
     {
         "id": "6BL4PpswVjH9BAajbIbpmZ",
-        "order": 20,
+        "playlistEntry": 20,
         "name": "Tomorrow Comes Today",
         "addedBy": {
             "id": "danielbratsberg"
@@ -2104,16 +1749,11 @@
                 "valence": 0.57
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NT8AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NT8AAAAAAAAAA==/",
-        "_etag": "\"1b01b481-0000-3c00-0000-68d7ba0f0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968335
+        "origin": "analyzeplaylist"
     },
     {
         "id": "4n5DRMfFBNJNec1JApfILt",
-        "order": 9,
+        "playlistEntry": 9,
         "name": "Minimum",
         "addedBy": {
             "id": "prancey"
@@ -2136,16 +1776,11 @@
                 "valence": 0.313
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NT9AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NT9AAAAAAAAAA==/",
-        "_etag": "\"1b01a781-0000-3c00-0000-68d7ba0a0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968330
+        "origin": "analyzeplaylist"
     },
     {
         "id": "5bbgiWfaHG6Vruyg3OWQuU",
-        "order": 11,
+        "playlistEntry": 11,
         "name": "Overkill - Acoustic Version",
         "addedBy": {
             "id": "prancey"
@@ -2168,16 +1803,11 @@
                 "valence": 0.2
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NT+AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NT+AAAAAAAAAA==/",
-        "_etag": "\"1b01ab81-0000-3c00-0000-68d7ba0b0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968331
+        "origin": "analyzeplaylist"
     },
     {
         "id": "6NzO8H8HWe1hHaiZWiGpXH",
-        "order": 12,
+        "playlistEntry": 12,
         "name": "Overcome",
         "addedBy": {
             "id": "arieloygarden"
@@ -2200,16 +1830,11 @@
                 "valence": 0.0829
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NT-AAAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NT-AAAAAAAAAA==/",
-        "_etag": "\"1b01ac81-0000-3c00-0000-68d7ba0c0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968332
+        "origin": "analyzeplaylist"
     },
     {
         "id": "32uLRYPFYAjNZGC7rQ6PXA",
-        "order": 10,
+        "playlistEntry": 10,
         "name": "Sand Drawing",
         "addedBy": {
             "id": "prancey"
@@ -2232,16 +1857,11 @@
                 "valence": 0.069
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NQAAQAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NQAAQAAAAAAAA==/",
-        "_etag": "\"1b01a881-0000-3c00-0000-68d7ba0a0000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968330
+        "origin": "analyzeplaylist"
     },
     {
         "id": "0O6jl8Zamz6TGF0nUwMQsF",
-        "order": 5,
+        "playlistEntry": 5,
         "name": "Frequency",
         "addedBy": {
             "id": "prancey"
@@ -2264,32 +1884,22 @@
                 "valence": 0.215
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NQBAQAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NQBAQAAAAAAAA==/",
-        "_etag": "\"1b01a381-0000-3c00-0000-68d7ba080000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968328
+        "origin": "analyzeplaylist"
     },
     {
         "id": "50agchThOUVlfQptSS4IZD",
-        "order": 6,
+        "playlistEntry": 6,
         "name": "Wonderful Night",
         "addedBy": {
             "id": "prancey"
         },
         "duration": 163156,
         "reccobeats": [],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NQCAQAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NQCAQAAAAAAAA==/",
-        "_etag": "\"1b01a481-0000-3c00-0000-68d7ba080000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968328
+        "origin": "analyzeplaylist"
     },
     {
         "id": "0vI64OhYqTo6KYswDlx0yT",
-        "order": 7,
+        "playlistEntry": 7,
         "name": "Keep Talking",
         "addedBy": {
             "id": "prancey"
@@ -2312,16 +1922,11 @@
                 "valence": 0.24
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NQDAQAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NQDAQAAAAAAAA==/",
-        "_etag": "\"1b01a581-0000-3c00-0000-68d7ba090000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968329
+        "origin": "analyzeplaylist"
     },
     {
         "id": "1a3u6JpaSEndtkzDyUFOqC",
-        "order": 8,
+        "playlistEntry": 8,
         "name": "Weightless (jamesjamesjames Remix)",
         "addedBy": {
             "id": "prancey"
@@ -2344,16 +1949,11 @@
                 "valence": 0.0958
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NQEAQAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NQEAQAAAAAAAA==/",
-        "_etag": "\"1b01a681-0000-3c00-0000-68d7ba090000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968329
+        "origin": "analyzeplaylist"
     },
     {
         "id": "1r4gQdNHdAJfUpREI0ywiu",
-        "order": 82,
+        "playlistEntry": 82,
         "name": "Spaces",
         "addedBy": {
             "id": "arieloygarden"
@@ -2376,16 +1976,11 @@
                 "valence": 0.333
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NQFAQAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NQFAQAAAAAAAA==/",
-        "_etag": "\"1b01288d-0000-3c00-0000-68d7ba330000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968371
+        "origin": "analyzeplaylist"
     },
     {
         "id": "0wP9okoDWmbeC2w9E8ZzPu",
-        "order": 81,
+        "playlistEntry": 81,
         "name": "Wildcat",
         "addedBy": {
             "id": "prancey"
@@ -2408,16 +2003,11 @@
                 "valence": 0.785
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NQGAQAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NQGAQAAAAAAAA==/",
-        "_etag": "\"1b01278d-0000-3c00-0000-68d7ba320000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968370
+        "origin": "analyzeplaylist"
     },
     {
         "id": "4ml1Eq4wmcdfN0Q6pNEly7",
-        "order": 83,
+        "playlistEntry": 83,
         "name": "TRIPPIN",
         "addedBy": {
             "id": "arieloygarden"
@@ -2440,11 +2030,6 @@
                 "valence": 0.261
             }
         ],
-        "origin": "analyzeplaylist",
-        "_rid": "k-0wAM742NQHAQAAAAAAAA==",
-        "_self": "dbs/k-0wAA==/colls/k-0wAM742NQ=/docs/k-0wAM742NQHAQAAAAAAAA==/",
-        "_etag": "\"1b01298d-0000-3c00-0000-68d7ba330000\"",
-        "_attachments": "attachments/",
-        "_ts": 1758968371
+        "origin": "analyzeplaylist"
     }
 ]
