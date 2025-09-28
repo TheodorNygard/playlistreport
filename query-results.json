@@ -2031,5 +2031,59 @@
             }
         ],
         "origin": "analyzeplaylist"
+    },
+    {
+        "id": "79TkZmpXpNxLDi1RL0AXhP",
+        "playlistEntry": 84,
+        "name": "月の丘",
+        "addedBy": {
+            "id": "neo"
+        },
+        "duration": 206240,
+        "reccobeats": [
+            {
+                "id": "038f4451-27bf-41bc-a386-0217a8b198c4",
+                "href": "https://open.spotify.com/track/79TkZmpXpNxLDi1RL0AXhP",
+                "acousticness": 0.981,
+                "danceability": 0.419,
+                "energy": 0.135,
+                "instrumentalness": 0.0969,
+                "key": 3,
+                "liveness": 0.11,
+                "loudness": -16.493,
+                "mode": 1,
+                "speechiness": 0.0349,
+                "tempo": 80.418,
+                "valence": 0.255
+            }
+        ],
+        "origin": "analyzeplaylist"
+    },
+    {
+        "id": "4HyrWfaYJsoiNbKjniWyk0",
+        "playlistEntry": 85,
+        "name": "dear parents",
+        "addedBy": {
+            "id": "neo"
+        },
+        "duration": 151793,
+        "reccobeats": [
+            {
+                "id": "944ec108-81fa-4c7c-89be-74fe40b319c0",
+                "href": "https://open.spotify.com/track/4HyrWfaYJsoiNbKjniWyk0",
+                "acousticness": 0.877,
+                "danceability": 0.547,
+                "energy": 0.274,
+                "instrumentalness": 0.00000258,
+                "key": 7,
+                "liveness": 0.127,
+                "loudness": -10.525,
+                "mode": 1,
+                "speechiness": 0.0392,
+                "tempo": 79.791,
+                "valence": 0.225
+            }
+        ],
+        "origin": "analyzeplaylist"
     }
 ]
