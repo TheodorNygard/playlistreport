@@ -2085,5 +2085,97 @@
             }
         ],
         "origin": "analyzeplaylist"
+    },
+    {
+        "id": "4HMUrFl8y6rQCzEbaGEkcj",
+        "playlistEntry": 86,
+        "name": "Somebody Save Me",
+        "addedBy": {
+            "id": "rånse"
+        },
+        "duration": 230199,
+        "reccobeats": [
+            {
+                "id": "26723bde-5f55-4c62-ba94-87f9ac84c323",
+                "href": "https://open.spotify.com/track/4HMUrFl8y6rQCzEbaGEkcj",
+                "acousticness": 0.697,
+                "danceability": 0.577,
+                "energy": 0.657,
+                "instrumentalness": 0.0000032,
+                "key": 0,
+                "liveness": 0.116,
+                "loudness": -6.486,
+                "mode": 1,
+                "speechiness": 0.129,
+                "tempo": 180.727,
+                "valence": 0.437
+            }
+        ],
+        "origin": "analyzeplaylist"
+    },
+    {
+        "id": "4fM10RegWg0anIxBlJvjc5",
+        "playlistEntry": 87,
+        "name": "Chubina",
+        "addedBy": {
+            "id": "kratos"
+        },
+        "duration": 90607,
+        "reccobeats": [],
+        "origin": "analyzeplaylist"
+    },
+    {
+        "id": "2Gt7fjNlx901pPRkvBiNBZ",
+        "playlistEntry": 88,
+        "name": "Take Me Back To Eden",
+        "addedBy": {
+            "id": "kratos"
+        },
+        "duration": 500116,
+        "reccobeats": [
+            {
+                "id": "6942d0b7-44e8-4e1b-b1a6-3cf782f11c79",
+                "href": "https://open.spotify.com/track/2Gt7fjNlx901pPRkvBiNBZ",
+                "acousticness": 0.0504,
+                "danceability": 0.511,
+                "energy": 0.625,
+                "instrumentalness": 0.00011,
+                "key": 3,
+                "liveness": 0.311,
+                "loudness": -7.911,
+                "mode": 0,
+                "speechiness": 0.0494,
+                "tempo": 118.064,
+                "valence": 0.107
+            }
+        ],
+        "origin": "analyzeplaylist"
+    },
+    {
+        "id": "3xXBsjrbG1xQIm1xv1cKOt",
+        "playlistEntry": 89,
+        "name": "One More Light",
+        "addedBy": {
+            "id": "kratos"
+        },
+        "duration": 255066,
+        "reccobeats": [
+            {
+                "id": "06674024-80c6-4da5-b6f0-027a6ebfa9b1",
+                "href": "https://open.spotify.com/track/3xXBsjrbG1xQIm1xv1cKOt",
+                "acousticness": 0.904,
+                "danceability": 0.593,
+                "energy": 0.2,
+                "instrumentalness": 0,
+                "key": 8,
+                "liveness": 0.0897,
+                "loudness": -11.063,
+                "mode": 1,
+                "speechiness": 0.0311,
+                "tempo": 83.966,
+                "valence": 0.17
+            }
+        ],
+        "origin": "analyzeplaylist"
     }
 ]
