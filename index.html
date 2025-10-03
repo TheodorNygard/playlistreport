@@ -75,13 +75,11 @@
           0 0 40px rgba(29, 185, 84, 0.15);
       }
       
-      /* Special styling for the duration container at top */
       .viz-container.duration-primary {
         background: linear-gradient(135deg, rgba(29, 185, 84, 0.1) 0%, rgba(20, 25, 40, 0.95) 100%);
         border-color: rgba(29, 185, 84, 0.2);
       }
       
-      /* Visualization containers - center content */
       #timeline-vis, #pie-vis, #progress-vis {
         width: 100%;
         display: flex;
@@ -90,7 +88,6 @@
         min-height: 60px;
       }
       
-      /* Stats section with improved layout */
       .stats {
         width: 100%;
         max-width: 800px;
@@ -145,7 +142,6 @@
         color: #1db954;
       }
       
-      /* User stats with better mobile layout */
       .user-stats {
         display: flex;
         flex-wrap: wrap;
@@ -161,7 +157,6 @@
         white-space: nowrap;
       }
       
-      /* Quick duration summary for top section */
       .duration-summary {
         display: flex;
         gap: 30px;
@@ -194,7 +189,6 @@
         color: #1db954;
       }
       
-      /* Vega embed improvements */
       .vega-embed {
         padding: 0 !important;
         width: 100% !important;
@@ -231,7 +225,6 @@
         transform: translateY(-1px);
       }
       
-      /* Loading animation improvements */
       @keyframes shimmer {
         0% {
           background-position: -1000px 0;
@@ -269,7 +262,6 @@
         font-size: 14px;
       }
       
-      /* Responsive improvements */
       @media (max-width: 768px) {
         body {
           padding: 16px;
@@ -308,7 +300,6 @@
           font-size: 1.25em;
         }
         
-        /* Center Vega controls on mobile */
         .vega-embed .vega-actions {
           left: 50% !important;
           right: auto !important;
@@ -348,7 +339,6 @@
         }
       }
       
-      /* Dark mode scrollbar */
       ::-webkit-scrollbar {
         width: 8px;
         height: 8px;
@@ -368,7 +358,6 @@
         background: rgba(29, 185, 84, 0.5);
       }
       
-      /* Emoji icons with better spacing */
       .emoji-icon {
         font-size: 1.2em;
         margin-right: 4px;
@@ -379,7 +368,6 @@
     <div class="dashboard-wrapper">
       <h1>🎵 Spotify Playlist Analytics Dashboard</h1>
       
-      <!-- Duration/Progress moved to top with enhanced styling -->
       <div class="viz-container duration-primary loading" id="progress-container">
         <div id="duration-summary" class="duration-summary"></div>
         <div id="progress-vis">
@@ -402,13 +390,13 @@
     </div>
     
     <script>
-      // Function to calculate responsive width with better mobile handling
+      console.log('=== SCRIPT STARTING ===');
+      
       function getResponsiveWidth() {
         const viewportWidth = window.innerWidth;
         const padding = viewportWidth < 768 ? 32 : 80;
         const containerWidth = Math.min(viewportWidth - padding, 1400);
         
-        // Return different widths for different screen sizes
         if (viewportWidth < 480) {
           return Math.max(containerWidth, 280);
         } else if (viewportWidth < 768) {
@@ -418,7 +406,6 @@
         }
       }
       
-      // Function to calculate responsive height
       function getResponsiveHeight(baseHeight) {
         const viewportWidth = window.innerWidth;
         if (viewportWidth < 480) {
@@ -429,7 +416,6 @@
         return baseHeight;
       }
       
-      // Dark theme configuration for Vega
       const darkTheme = {
         background: 'transparent',
         title: { 
@@ -455,20 +441,492 @@
         }
       };
       
+      console.log('Fetching data from Azure CDN...');
+      
       fetch('https://nygdevcdn.blob.core.windows.net/public/playlistdata.json')
-        .then(response => response.json())
+        .then(response => {
+          console.log('Fetch response received. Status:', response.status);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
         .then(data => {
+          console.log('Data parsed successfully. Songs:', data.length);
           
-          const vizWidth = getResponsiveWidth();
-          const isMobile = window.innerWidth < 768;
-          
-          // Clear loading text
-          document.querySelectorAll('.loading-text').forEach(el => el.remove());
-          
-          // Process data for timeline
-          const timelineData = data.map(song => {
-            const features = song.reccobeats && song.reccobeats[0] ? song.reccobeats[0] : {};
-            return {
-              order: song.playlistEntry,
-              name: song.name,
-              addedBy: song.addedBy ? song.addedBy.id : '
+          try {
+            const vizWidth = getResponsiveWidth();
+            const isMobile = window.innerWidth < 768;
+            console.log('Viewport width:', vizWidth, 'Mobile:', isMobile);
+            
+            // Clear loading text
+            document.querySelectorAll('.loading-text').forEach(el => el.remove());
+            console.log('Loading text cleared');
+            
+            // Process data for timeline
+            console.log('Processing timeline data...');
+            const timelineData = data.map(song => {
+              const features = song.reccobeats && song.reccobeats[0] ? song.reccobeats[0] : {};
+              return {
+                order: song.playlistEntry,
+                name: song.name,
+                addedBy: song.addedBy ? song.addedBy.id : 'unknown',
+                energy: features.energy || 0,
+                valence: features.valence || 0,
+                mood_energy: ((features.energy || 0) + (features.valence || 0)) / 2,
+                duration_minutes: song.duration / 60000
+              };
+            }).sort((a, b) => a.order - b.order);
+            console.log('Timeline data processed:', timelineData.length, 'entries');
+            
+            // Calculate runtime by user
+            console.log('Calculating user runtimes...');
+            const userRuntimes = {};
+            let totalDuration = 0;
+            
+            data.forEach(song => {
+              const user = song.addedBy ? song.addedBy.id : 'unknown';
+              const duration = song.duration / 60000;
+              userRuntimes[user] = (userRuntimes[user] || 0) + duration;
+              totalDuration += duration;
+            });
+            console.log('User runtimes:', userRuntimes);
+            console.log('Total duration (minutes):', totalDuration);
+            
+            // Sort users by runtime
+            const sortedUserRuntimes = Object.entries(userRuntimes)
+              .sort((a, b) => b[1] - a[1]);
+            
+            const pieData = sortedUserRuntimes.map(([user, duration]) => ({
+              user: user,
+              duration: duration,
+              percentage: (duration / totalDuration) * 100
+            }));
+            console.log('Pie data prepared:', pieData);
+            
+            const userColors = ['#1db954', '#00d9ff', '#ff6b6b', '#feca57', '#a55eea', '#26de81'];
+            
+            const userColorMap = {};
+            sortedUserRuntimes.forEach(([user], index) => {
+              userColorMap[user] = userColors[index % userColors.length];
+            });
+            
+            const sortedUsers = sortedUserRuntimes.map(([user]) => user);
+            console.log('Sorted users:', sortedUsers);
+            
+            // Calculate duration stats
+            const hours = Math.floor(totalDuration / 60);
+            const minutes = Math.round(totalDuration % 60);
+            const goalDuration = 12 * 60;
+            const remaining = goalDuration - totalDuration;
+            const remHours = Math.floor(Math.abs(remaining) / 60);
+            const remMinutes = Math.round(Math.abs(remaining) % 60);
+            const progressPercent = (totalDuration / goalDuration) * 100;
+            
+            console.log('Creating duration summary...');
+            document.getElementById('duration-summary').innerHTML = `
+              <div class="duration-item">
+                <div class="duration-label">Total Duration</div>
+                <div class="duration-value highlight">${hours}h ${minutes}m</div>
+              </div>
+              <div class="duration-item">
+                <div class="duration-label">Songs</div>
+                <div class="duration-value">${data.length}</div>
+              </div>
+              <div class="duration-item">
+                <div class="duration-label">Progress</div>
+                <div class="duration-value" style="color: ${progressPercent >= 100 ? '#feca57' : '#1db954'}">
+                  ${progressPercent.toFixed(0)}%
+                </div>
+              </div>
+              <div class="duration-item">
+                <div class="duration-label">${remaining >= 0 ? 'Remaining' : 'Over Goal'}</div>
+                <div class="duration-value" style="color: ${remaining >= 0 ? '#e4e6eb' : '#feca57'}">
+                  ${remHours}h ${remMinutes}m
+                </div>
+              </div>
+            `;
+            console.log('Duration summary created');
+            
+            // Progress Bar Data
+            const progressData = [
+              {
+                label: 'Playlist Duration',
+                value: Math.min(totalDuration, goalDuration),
+                actualValue: totalDuration,
+                max: goalDuration,
+                percentage: (totalDuration / goalDuration) * 100
+              }
+            ];
+            
+            console.log('Creating Vega specs...');
+            
+            // Progress Bar Spec
+            const progressSpec = {
+              $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
+              width: isMobile ? vizWidth * 0.9 : vizWidth * 0.85,
+              height: getResponsiveHeight(50),
+              autosize: {
+                type: 'fit',
+                contains: 'padding',
+                resize: true
+              },
+              background: 'transparent',
+              config: darkTheme,
+              data: { values: progressData },
+              layer: [
+                {
+                  mark: {
+                    type: 'bar',
+                    color: 'rgba(255, 255, 255, 0.05)',
+                    cornerRadiusEnd: 8,
+                    height: isMobile ? 25 : 35
+                  },
+                  encoding: {
+                    x: {
+                      datum: goalDuration,
+                      type: 'quantitative',
+                      scale: { domain: [0, goalDuration] },
+                      axis: {
+                        title: null,
+                        format: '.0f',
+                        labelAngle: 0,
+                        labelFontSize: isMobile ? 10 : 12,
+                        grid: false
+                      }
+                    },
+                    y: {
+                      field: 'label',
+                      type: 'nominal',
+                      axis: { title: null, labelFontSize: 0 }
+                    }
+                  }
+                },
+                {
+                  mark: {
+                    type: 'bar',
+                    color: {
+                      gradient: 'linear',
+                      stops: totalDuration > goalDuration ? 
+                        [
+                          { offset: 0, color: '#feca57' },
+                          { offset: 1, color: '#ff6b6b' }
+                        ] : 
+                        [
+                          { offset: 0, color: '#1db954' },
+                          { offset: 1, color: '#1ed760' }
+                        ],
+                      x1: 0, y1: 0, x2: 1, y2: 0
+                    },
+                    cornerRadiusEnd: 8,
+                    height: isMobile ? 25 : 35
+                  },
+                  encoding: {
+                    x: {
+                      field: 'value',
+                      type: 'quantitative',
+                      scale: { domain: [0, goalDuration] }
+                    },
+                    y: {
+                      field: 'label',
+                      type: 'nominal'
+                    },
+                    tooltip: [
+                      { field: 'actualValue', type: 'quantitative', format: '.1f', title: 'Duration (min)' },
+                      { field: 'percentage', type: 'quantitative', format: '.1f', title: 'Progress (%)' }
+                    ]
+                  }
+                }
+              ]
+            };
+            
+            // Timeline Spec
+            const timelineSpec = {
+              $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
+              title: '🎶 Playlist Energy & Mood Flow',
+              width: isMobile ? vizWidth * 0.9 : vizWidth * 0.85,
+              height: getResponsiveHeight(350),
+              autosize: {
+                type: 'fit',
+                contains: 'padding',
+                resize: true
+              },
+              background: 'transparent',
+              config: darkTheme,
+              data: { values: timelineData },
+              layer: [
+                {
+                  mark: {
+                    type: 'area',
+                    line: { color: '#1db954', strokeWidth: 2 },
+                    color: {
+                      gradient: 'linear',
+                      stops: [
+                        { offset: 0, color: 'rgba(29, 185, 84, 0.05)' },
+                        { offset: 1, color: 'rgba(29, 185, 84, 0.25)' }
+                      ],
+                      x1: 0, y1: 0, x2: 0, y2: 1
+                    },
+                    interpolate: 'monotone'
+                  },
+                  encoding: {
+                    x: {
+                      field: 'order',
+                      type: 'quantitative',
+                      title: 'Song Position',
+                      axis: { 
+                        tickMinStep: 1, 
+                        labelAngle: 0,
+                        labelFontSize: isMobile ? 10 : 12 
+                      }
+                    },
+                    y: {
+                      field: 'mood_energy',
+                      type: 'quantitative',
+                      scale: { domain: [0, 1] },
+                      title: 'Energy + Mood Score',
+                      axis: {
+                        labelFontSize: isMobile ? 10 : 12
+                      }
+                    }
+                  }
+                },
+                {
+                  mark: {
+                    type: 'point',
+                    filled: true,
+                    size: isMobile ? 60 : 100,
+                    tooltip: true,
+                    strokeWidth: 2,
+                    stroke: 'rgba(255, 255, 255, 0.2)'
+                  },
+                  encoding: {
+                    x: {
+                      field: 'order',
+                      type: 'quantitative'
+                    },
+                    y: {
+                      field: 'mood_energy',
+                      type: 'quantitative'
+                    },
+                    color: {
+                      field: 'addedBy',
+                      type: 'nominal',
+                      title: 'Added By',
+                      scale: {
+                        domain: sortedUsers,
+                        range: userColors.slice(0, sortedUsers.length)
+                      },
+                      legend: { 
+                        orient: isMobile ? 'top' : 'bottom', 
+                        titleColor: '#e4e6eb', 
+                        labelColor: '#b8bcc8', 
+                        columns: isMobile ? 2 : 4,
+                        symbolType: 'circle',
+                        labelFontSize: isMobile ? 10 : 12
+                      }
+                    },
+                    tooltip: [
+                      { field: 'name', type: 'nominal', title: 'Song' },
+                      { field: 'addedBy', type: 'nominal', title: 'Added By' },
+                      { field: 'order', type: 'quantitative', title: 'Position' },
+                      { field: 'energy', type: 'quantitative', format: '.2f', title: 'Energy' },
+                      { field: 'valence', type: 'quantitative', format: '.2f', title: 'Mood' },
+                      { field: 'mood_energy', type: 'quantitative', format: '.2f', title: 'Combined' }
+                    ]
+                  }
+                }
+              ]
+            };
+            
+            // Pie Chart Spec
+            const pieSpec = {
+              $schema: 'https://vega.github.io/schema/vega-lite/v6.json',
+              title: '⏱️ Runtime Contribution by User',
+              width: Math.min(isMobile ? vizWidth * 0.7 : vizWidth * 0.4, 350),
+              height: getResponsiveHeight(350),
+              autosize: {
+                type: 'fit',
+                contains: 'padding',
+                resize: true
+              },
+              background: 'transparent',
+              config: darkTheme,
+              data: { values: pieData },
+              mark: {
+                type: 'arc',
+                innerRadius: isMobile ? 40 : 60,
+                outerRadius: isMobile ? 100 : 140,
+                tooltip: true,
+                stroke: 'rgba(255, 255, 255, 0.1)',
+                strokeWidth: 2,
+                padAngle: 0.01
+              },
+              encoding: {
+                theta: {
+                  field: 'duration',
+                  type: 'quantitative',
+                  stack: true
+                },
+                color: {
+                  field: 'user',
+                  type: 'nominal',
+                  title: 'User (by duration)',
+                  scale: {
+                    domain: sortedUsers,
+                    range: userColors.slice(0, sortedUsers.length)
+                  },
+                  legend: { 
+                    orient: isMobile ? 'top' : 'bottom', 
+                    titleColor: '#e4e6eb', 
+                    labelColor: '#b8bcc8',
+                    symbolType: 'circle',
+                    labelFontSize: isMobile ? 10 : 12
+                  }
+                },
+                order: {
+                  field: 'duration',
+                  type: 'quantitative',
+                  sort: 'descending'
+                },
+                opacity: {
+                  value: 0.95
+                },
+                tooltip: [
+                  { field: 'user', type: 'nominal', title: 'User' },
+                  { field: 'duration', type: 'quantitative', format: '.1f', title: 'Minutes' },
+                  { field: 'percentage', type: 'quantitative', format: '.1f', title: 'Percentage (%)' }
+                ]
+              }
+            };
+            
+            const embedOpts = {
+              actions: {
+                export: true,
+                source: false,
+                compiled: false,
+                editor: false
+              },
+              theme: 'dark',
+              renderer: 'canvas'
+            };
+            
+            console.log('Embedding progress visualization...');
+            vegaEmbed('#progress-vis', progressSpec, embedOpts)
+              .then(() => {
+                console.log('Progress viz embedded successfully');
+                document.getElementById('progress-container').classList.remove('loading');
+              })
+              .catch(err => {
+                console.error('Error embedding progress viz:', err);
+              });
+            
+            console.log('Embedding timeline visualization...');
+            vegaEmbed('#timeline-vis', timelineSpec, embedOpts)
+              .then(() => {
+                console.log('Timeline viz embedded successfully');
+                document.getElementById('timeline-container').classList.remove('loading');
+              })
+              .catch(err => {
+                console.error('Error embedding timeline viz:', err);
+              });
+            
+            console.log('Embedding pie chart...');
+            vegaEmbed('#pie-vis', pieSpec, embedOpts)
+              .then(() => {
+                console.log('Pie chart embedded successfully');
+                document.getElementById('pie-container').classList.remove('loading');
+              })
+              .catch(err => {
+                console.error('Error embedding pie chart:', err);
+              });
+            
+            // Count songs per user
+            const songCounts = {};
+            data.forEach(song => {
+              const user = song.addedBy ? song.addedBy.id : 'unknown';
+              songCounts[user] = (songCounts[user] || 0) + 1;
+            });
+            
+            const sortedSongCounts = Object.entries(songCounts)
+              .sort((a, b) => b[1] - a[1]);
+            
+            const userStatsHTML = sortedSongCounts
+              .map(([user, count], index) => {
+                const position = index + 1;
+                let medal = '';
+                if (position === 1) medal = '🥇';
+                else if (position === 2) medal = '🥈';
+                else if (position === 3) medal = '🥉';
+                
+                return `<span class="user-stat-item" style="border-color: ${userColorMap[user]}40;">
+                  ${medal} <span style="color: ${userColorMap[user]};">${user}</span>: ${count}
+                </span>`;
+              })
+              .join('');
+            
+            console.log('Creating stats section...');
+            document.getElementById('stats').innerHTML = `
+              <div class="stats-grid">
+                <div class="stats-row">
+                  <span class="stats-label"><span class="emoji-icon">📊</span> Average Song Length</span>
+                  <span class="stats-value">${(totalDuration / data.length).toFixed(1)} min</span>
+                </div>
+                <div class="stats-row">
+                  <span class="stats-label"><span class="emoji-icon">🎸</span> Average Energy</span>
+                  <span class="stats-value">${(timelineData.reduce((sum, d) => sum + d.energy, 0) / timelineData.length).toFixed(2)}</span>
+                </div>
+                <div class="stats-row">
+                  <span class="stats-label"><span class="emoji-icon">😊</span> Average Mood</span>
+                  <span class="stats-value">${(timelineData.reduce((sum, d) => sum + d.valence, 0) / timelineData.length).toFixed(2)}</span>
+                </div>
+                <div class="stats-row">
+                  <span class="stats-label"><span class="emoji-icon">👥</span> Contributors</span>
+                  <span class="stats-value">${sortedUsers.length} users</span>
+                </div>
+              </div>
+              <div class="stats-row" style="margin-top: 16px;">
+                <span class="stats-label"><span class="emoji-icon">🏆</span> Songs by User</span>
+                <div class="user-stats">${userStatsHTML}</div>
+              </div>
+            `;
+            console.log('Stats section created');
+            
+            console.log('=== ALL PROCESSING COMPLETE ===');
+            
+            // Handle window resize
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+              clearTimeout(resizeTimer);
+              resizeTimer = setTimeout(() => {
+                console.log('Window resized, reloading...');
+                window.location.reload();
+              }, 500);
+            });
+            
+          } catch (error) {
+            console.error('ERROR during data processing:', error);
+            console.error('Stack trace:', error.stack);
+            document.querySelector('.dashboard-wrapper').innerHTML += `
+              <div style="background: rgba(255, 71, 87, 0.1); border: 1px solid #ff4757; 
+                          border-radius: 12px; padding: 20px; text-align: center; margin-top: 20px;">
+                <p style="color: #ff4757;">⚠️ Error processing data</p>
+                <p style="color: #8b92a4; font-size: 14px; margin-top: 8px;">${error.message}</p>
+                <p style="color: #8b92a4; font-size: 12px; margin-top: 8px;">Check console for details</p>
+              </div>`;
+          }
+        })
+        .catch(error => {
+          console.error('ERROR loading data:', error);
+          console.error('Stack trace:', error.stack);
+          document.querySelector('.dashboard-wrapper').innerHTML += `
+            <div style="background: rgba(255, 71, 87, 0.1); border: 1px solid #ff4757; 
+                        border-radius: 12px; padding: 20px; text-align: center; margin-top: 20px;">
+              <p style="color: #ff4757;">⚠️ Error loading data</p>
+              <p style="color: #8b92a4; font-size: 14px; margin-top: 8px;">${error.message}</p>
+              <p style="color: #8b92a4; font-size: 12px; margin-top: 8px;">Check console for details</p>
+            </div>`;
+        });
+    </script>
+  </body>
+</html>
